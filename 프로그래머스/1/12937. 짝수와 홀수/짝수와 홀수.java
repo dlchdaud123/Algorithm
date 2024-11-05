@@ -4,8 +4,9 @@ class Solution {
         if(num % 2 == 0){
             answer = "Even";
         }
-        else
+        else{
             answer = "Odd";
+        }
         return answer;
     }
 }
