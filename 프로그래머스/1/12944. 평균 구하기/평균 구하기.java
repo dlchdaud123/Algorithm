@@ -3,9 +3,9 @@ class Solution {
         double answer = 0;
         int sum = 0;
         for(int i = 0; i < arr.length; i++){
-            sum += arr[i];
+            answer += arr[i];
         }
-        answer = (double) sum / arr.length;
+        answer /= arr.length;
         return answer;
     }
 }
