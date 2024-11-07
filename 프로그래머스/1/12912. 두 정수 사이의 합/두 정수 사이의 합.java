@@ -1,20 +1,19 @@
 class Solution {
     public long solution(int a, int b) {
         long answer = 0;
-        long sum = 0;
-        if(a > b){
-            for(long i = b; i <= a; i++){
-                sum += i;
-            }
-        }
-        else if(a < b){
+        if(a < b){
             for(long i = a; i <= b; i++){
-                sum += i;
+                answer += i;
             }
         }
-        else
-            sum = a;
-        answer = sum;
+        else if(a > b){
+            for(long i = b; i <= a; i++){
+                answer += i;
+            }
+        }
+        else {// a == b
+            answer = a;
+        }
         return answer;
     }
 }
