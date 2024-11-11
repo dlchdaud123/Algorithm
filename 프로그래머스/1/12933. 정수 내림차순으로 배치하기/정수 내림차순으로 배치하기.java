@@ -1,18 +1,17 @@
 import java.util.*;
+
 class Solution {
-    public long solution(long n) {
+    public Long solution(long n) {
         long answer = 0;
         String str = Long.toString(n);
         char[] arr = str.toCharArray();
         
         Arrays.sort(arr);
-        
-        String newstr = new String();
-        for(int i = arr.length-1; i >= 0; i--){
-            newstr+= arr[i];
+        String answer_str = "";
+        for(int i = arr.length - 1; i >= 0; i--){
+            answer_str += arr[i];
         }
-        
-        answer = Long.parseLong(newstr);
+        answer = Long.parseLong(answer_str);
         return answer;
     }
 }
