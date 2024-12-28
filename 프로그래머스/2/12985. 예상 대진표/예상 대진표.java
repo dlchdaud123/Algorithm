@@ -3,23 +3,20 @@ class Solution
     public int solution(int n, int a, int b)
     {
         int answer = 0;
-        for(int i = 0; i < n/2; i++){
+        for(int i = 0; i < n; i++){
             if(a%2 == 1){
                 a++;
             }
-            a /= 2;
-            
             if(b%2 == 1){
                 b++;
             }
+            a /= 2;
             b /= 2;
-            
             answer++;
             if(a == b){
                 return answer;
             }
         }
-
         return answer;
     }
 }
