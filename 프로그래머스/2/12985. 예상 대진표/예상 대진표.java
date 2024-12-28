@@ -3,13 +3,15 @@ class Solution
     public int solution(int n, int a, int b)
     {
         int answer = 0;
-        for(int i = 0; i < n; i++){
-            if(a%2 == 1){
-                a++;
-            }
-            if(b%2 == 1){
-                b++;
-            }
+        a -= 1;
+        b -= 1;
+        for(int i = 0; i < 20; i++){
+            // if(a%2 == 1){
+            //     a++;
+            // }
+            // if(b%2 == 1){
+            //     b++;
+            // }
             a /= 2;
             b /= 2;
             answer++;
