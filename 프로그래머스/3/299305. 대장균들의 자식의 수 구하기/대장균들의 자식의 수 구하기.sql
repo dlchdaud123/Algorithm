@@ -1,0 +1,9 @@
+-- 코드를 작성해주세요
+SELECT ec1.ID, COALESCE(child_count, 0) AS child_count
+FROM ECOLI_DATA ec1
+LEFT JOIN(
+    SELECT PARENT_ID, COUNT(*) AS CHILD_COUNT
+    FROM ECOLI_DATA
+    WHERE PARENT_ID IS NOT NULL
+    GROUP BY PARENT_ID
+) ec2 ON ec1.id = ec2.parent_id;
